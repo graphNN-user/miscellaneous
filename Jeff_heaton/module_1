@@ -36,4 +36,13 @@ text = ["col-zero", "col-one", "col-two", "col-three"]
 lookup = {key: value for (value, key) in enumerate(text)}
 print(f'The index of "col-two" is {lookup["col-two"]}')
 
+# The map function takes a list and applies a function to each member of the list and 
+# returns a second list that is the same size as the first.
+def process_string(str):
+    t = str.strip()
+    return t[0].upper() + t[1:]
+l = ["   apple  ", "pear ", "orange", "pine apple  "]
+l2 = list(map(process_string, l))
+l3 = [process_string(x) for x in l]
+
 
