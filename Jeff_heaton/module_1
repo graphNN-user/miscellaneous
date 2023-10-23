@@ -1,0 +1,24 @@
+
+# You can mix strings and variables for printing. This technique is called a formatted or interpolated string. 
+# The variables must be inside of the curly braces.
+a = 10
+print(f"The value of a is {a}")
+print("a is {}".format(a))
+
+# Iterate over a collection, and know where your index.  (Python is zero-based!)
+l = ["a", "b", "c", "d"]
+for i, l in enumerate(l):
+    print(f"{i}:{l}")
+
+# set
+s = set()
+s = {"a", "b", "c"}
+s = set(["a", "b", "c"])
+print(s)
+
+# Be careful that you do not attempt to access an undefined key, as this will result in an error. 
+# You can check to see if a key is defined: if "age" in d:
+# You can also access the dictionary and provide a default value, as the following code demonstrates.
+d.get("unknown_key", "default")
+
+
