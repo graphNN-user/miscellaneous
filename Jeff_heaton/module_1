@@ -21,4 +21,19 @@ print(s)
 # You can also access the dictionary and provide a default value, as the following code demonstrates.
 d.get("unknown_key", "default")
 
+# Two lists can be combined into a single list by the zip command.
+a = [1, 2, 3, 4, 5]
+b = [5, 4, 3, 2, 1]
+for x, y in zip(a, b):
+    print(f"{x} - {y}")
+
+f = lambda x: x if x < 5 else 5
+a = [2, 10, 3, 11, 10, 3, 2, 1]
+[f(x) for x in a]
+
+#to build up an index to symbolic column names.
+text = ["col-zero", "col-one", "col-two", "col-three"]
+lookup = {key: value for (value, key) in enumerate(text)}
+print(f'The index of "col-two" is {lookup["col-two"]}')
+
 
