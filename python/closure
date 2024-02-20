@@ -1,0 +1,25 @@
+# closure: an inner function is defined inside outer function, and returned by the outer function
+
+def nth_power(exponent):
+    def powof(base):
+        return pow(base, exponent)
+    return powof
+square = nth_power(2)
+cube = nth_power(3)
+print(square(5))
+print(square(7))
+print(cube(5))
+print(cube(8))
+
+
+def enter_number_outer():
+    numbers = []
+    def enter_number_inner(x):
+        numbers.append(x)
+        print(numbers)
+    return enter_number_inner
+enter_num = enter_number_outer()
+enter_num(3)
+enter_num(7)
+enter_num(4)
+
