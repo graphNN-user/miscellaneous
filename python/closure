@@ -23,3 +23,9 @@ enter_num(3)
 enter_num(7)
 enter_num(4)
 
+
+def multipliers2():
+    return (lambda x: i*x for i in range(4) )
+
+print([m(2) for m in multipliers2()])
+
