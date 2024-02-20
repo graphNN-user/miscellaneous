@@ -1,0 +1,13 @@
+# expressions in default arguments are calculated when the function is defined, not when it’s called.
+#
+
+def extendedList1(val, list0=["a"]):   # list0 will be created when the function is defined
+    print(list0)
+    list0.append(val)
+    return(list0)                     # the return value will be the reference of list0 created when the function is defined
+
+
+def extendedList3(val, list0=["a"]):
+    print(list0)
+    list2 = list0 + [val]
+    return(list2)
