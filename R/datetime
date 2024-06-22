@@ -1,0 +1,13 @@
+
+library(lubridate)
+
+data1  <- "5/19/22 11:54"
+data2  <- "5/22/22 13:25"
+
+data1  <- as.POSIXct(strptime(data1, "%m/%d/%Y %H:%M")) 
+data2  <- as.POSIXct(strptime(data2, "%m/%d/%Y %H:%M")) 
+
+data1  <-  data1 %m+% years(2000)
+data2  <-  data2 %m+% years(2000)
+
+datadiff <- as.numeric(difftime(data2, data1), units = "mins")/60
